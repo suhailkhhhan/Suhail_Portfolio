@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suhail Khan | Backend Engineer</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#0f172a,#111827);
+  color:#f1f5f9;
+  scroll-behavior:smooth;
+}
+
+/* Glass */
+.glass{
+  background:rgba(30,41,59,0.6);
+  backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+/* Reveal */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .8s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Gradient text */
+.gradient-text{
+  background:linear-gradient(90deg,#22d3ee,#10b981);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* Project slider */
+.project-slider{
+  display:flex;
+  gap:24px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  padding-bottom:10px;
+}
+.project-slider::-webkit-scrollbar{
+  height:8px;
+}
+.project-slider::-webkit-scrollbar-thumb{
+  background:#10b981;
+  border-radius:10px;
+}
+.project-card{
+  min-width:350px;
+  scroll-snap-align:start;
+  transition:.3s;
+}
+.project-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 40px rgba(16,185,129,0.3);
+}
+
+/* Navbar underline */
+.nav-link{
+  position:relative;
+}
+.nav-link::after{
+  content:'';
+  position:absolute;
+  bottom:-6px;
+  left:0;
+  width:0;
+  height:2px;
+  background:#10b981;
+  transition:.3s;
+}
+.nav-link:hover::after{
+  width:100%;
+}
+</style>
+</head>
+
+<body class="min-h-screen">
+
+<!-- NAVBAR -->
+<nav class="fixed w-full bg-gray-900/90 backdrop-blur-md z-50 py-4 border-b border-gray-800">
+<div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+<div class="text-xl font-bold gradient-text">Suhail Khan</div>
+<div class="hidden md:flex space-x-8">
+<a href="#home" class="nav-link">Home</a>
+<a href="#projects" class="nav-link">Projects</a>
+<a href="#skills" class="nav-link">Skills</a>
+<a href="#architecture" class="nav-link">Architecture</a>
+<a href="#experience" class="nav-link">Experience</a>
+<a href="#contact" class="nav-link">Contact</a>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="min-h-screen flex items-center pt-24">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+
+<div class="reveal">
+<h1 class="text-5xl font-bold mb-4">Suhail Khan</h1>
+<h2 class="text-2xl text-emerald-400 mb-6">Backend Engineer | Java & REST APIs</h2>
+
+<p class="text-gray-300 leading-relaxed mb-8">
+Backend-focused developer building scalable applications using Java,
+Spring Boot, JDBC, MySQL and JWT-secured REST APIs.
+Strong foundation in layered architecture and database-driven systems.
+</p>
+
+<div class="flex gap-4">
+<a href="https://drive.google.com/file/d/12iDpV7s3ANE55HARdxX7S6qb3Ja637_h/view" class="px-6 py-3 bg-emerald-500 rounded-md hover:bg-emerald-600 transition">Download Resume</a>
+<a href="https://github.com/suhailkhhhan" target="_blank" class="px-6 py-3 border border-emerald-400 text-emerald-400 rounded-md hover:bg-emerald-400 hover:text-gray-900 transition">GitHub</a>
+</div>
+
+<!-- Stats -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 text-center sm:text-left">
+<div>
+<h3 class="text-3xl font-bold text-emerald-400">2+</h3>
+<p class="text-gray-400 text-sm">Backend Projects</p>
+</div>
+<div>
+<h3 class="text-3xl font-bold text-emerald-400">1+</h3>
+<p class="text-gray-400 text-sm">REST APIs Built</p>
+</div>
+</div>
+
+</div>
+
+<div class="flex justify-center reveal">
+<div class="w-72 h-72 rounded-2xl overflow-hidden border-4 border-emerald-400 shadow-xl">
+<img src="assets/Image/Personal_Photo.jpg" class="w-full h-full object-cover">
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-24 bg-gray-900/60">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-4xl font-bold text-center mb-20">
+<span class="gradient-text">Featured Backend Projects</span>
+</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+<!-- Project 1 -->
+<div class="glass p-8 rounded-2xl project-card reveal">
+<h3 class="text-2xl font-bold mb-4 text-emerald-400">MediFlow System</h3>
+
+<p class="text-gray-300 mb-6 leading-relaxed">
+Spring Boot REST backend with layered architecture:
+Controller → Service → Repository.
+Implements JWT authentication and role-based access control.
+</p>
+
+<div class="mb-4">
+<h4 class="font-semibold text-sm text-gray-400 mb-2">Tech Stack</h4>
+<p>Spring Boot • Hibernate • MySQL • JWT</p>
+</div>
+
+<div class="mb-6">
+<h4 class="font-semibold text-sm text-gray-400 mb-2">Key Features</h4>
+<ul class="list-disc ml-6 text-gray-300 text-sm space-y-1">
+<li>Secure REST APIs</li>
+<li>Role-based access</li>
+<li>Token authentication</li>
+<li>Service-layer validation</li>
+</ul>
+</div>
+
+<a href="https://github.com/suhailkhhhan/Medi-Flow" target="_blank"
+class="inline-flex items-center gap-2 px-5 py-2 bg-emerald-500 rounded-md hover:bg-emerald-600 transition">
+<i class="fab fa-github"></i>
+GitHub
+</a>
+</div>
+
+<!-- Project 2 -->
+<div class="glass p-8 rounded-2xl project-card reveal">
+<h3 class="text-2xl font-bold mb-4 text-emerald-400">User Notes API</h3>
+
+<p class="text-gray-300 mb-6 leading-relaxed">
+Secure RESTful backend built using FastAPI and PostgreSQL.
+Implements JWT authentication, OAuth2 password flow and
+user-specific CRUD operations.
+</p>
+
+<div class="mb-4">
+<h4 class="font-semibold text-sm text-gray-400 mb-2">Tech Stack</h4>
+<p>FastAPI • PostgreSQL • JWT • OAuth2</p>
+</div>
+
+<div class="mb-6">
+<h4 class="font-semibold text-sm text-gray-400 mb-2">Key Features</h4>
+<ul class="list-disc ml-6 text-gray-300 text-sm space-y-1">
+<li>User authentication & token validation</li>
+<li>Protected CRUD endpoints</li>
+<li>Password hashing</li>
+<li>Role-based access logic</li>
+</ul>
+</div>
+
+<a href="https://github.com/suhailkhhhan/User-Notes-API" target="_blank"
+class="inline-flex items-center gap-2 px-5 py-2 bg-emerald-500 rounded-md hover:bg-emerald-600 transition">
+<i class="fab fa-github"></i>
+GitHub
+</a>
+</div>
+
+
+<!-- Project 3 -->
+<div class="glass p-8 rounded-2xl project-card reveal">
+<h3 class="text-2xl font-bold mb-4 text-emerald-400">Hotel Reservation System</h3>
+
+<p class="text-gray-300 mb-6 leading-relaxed">
+A database-driven backend system built using Java and JDBC.
+Implements structured DAO pattern with MySQL integration,
+input validation and transactional booking logic.
+</p>
+
+<div class="mb-4">
+<h4 class="font-semibold text-sm text-gray-400 mb-2">Tech Stack</h4>
+<p>Java • JDBC • MySQL • DAO Pattern</p>
+</div>
+
+<div class="mb-6">
+<h4 class="font-semibold text-sm text-gray-400 mb-2">Key Features</h4>
+<ul class="list-disc ml-6 text-gray-300 text-sm space-y-1">
+<li>Room availability validation</li>
+<li>Guest CRUD operations</li>
+<li>Database normalization</li>
+<li>Modular architecture</li>
+</ul>
+</div>
+
+<a href="https://github.com/suhailkhhhan/Hotel-Reservation" target="_blank"
+class="inline-flex items-center gap-2 px-5 py-2 bg-emerald-500 rounded-md hover:bg-emerald-600 transition">
+<i class="fab fa-github"></i>
+GitHub
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-24">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<h2 class="text-4xl font-bold mb-20">
+<span class="gradient-text">Technical Stack</span>
+</h2>
+
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10">
+
+<!-- Java -->
+<div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-16 mx-auto mb-4">
+<p>Java</p>
+</div>
+
+<!-- Spring Boot -->
+<div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" class="w-16 mx-auto mb-4">
+<p>Spring Boot</p>
+</div>
+
+<!-- MySQL -->
+<div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-16 mx-auto mb-4">
+<p>MySQL</p>
+</div>
+
+<!-- PostgreSQL -->
+<div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="w-16 mx-auto mb-4">
+<p>PostgreSQL</p>
+</div>
+
+<!-- Docker -->
+<div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="w-16 mx-auto mb-4">
+<p>Docker</p>
+</div>
+
+<!-- Git -->
+<div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-16 mx-auto mb-4">
+<p>Git</p>
+</div>
+
+<!-- Python -->
+<div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-16 mx-auto mb-4">
+<p>Python</p>
+</div>
+
+<!-- FastAPI -->
+<div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" class="w-16 mx-auto mb-4">
+<p>FastAPI</p>
+</div>
+
+<!-- JWT -->
+<div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
+<img src="https://jwt.io/img/pic_logo.svg" class="h-16 mx-auto mb-4">
+<p>JWT</p>
+</div>
+
+<!-- SQL -->
+<div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-16 mx-auto mb-4">
+<p>SQL</p>
+</div>
+
+<!-- HTML -->
+<div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-16 mx-auto mb-4">
+<p>HTML</p>
+</div>
+
+<!-- CSS -->
+<div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-16 mx-auto mb-4">
+<p>CSS</p>
+</div>
+
+<!-- JavaScript -->
+<div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-16 mx-auto mb-4">
+<p>JavaScript</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ARCHITECTURE -->
+<section id="architecture" class="py-24 bg-gray-800/50">
+<div class="max-w-7xl mx-auto px-6">
+
+<h2 class="text-4xl font-bold text-center mb-20">
+<span class="gradient-text">Backend Architecture Flow</span>
+</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+
+<!-- LEFT SIDE -->
+<div class="md:col-span-3 space-y-12 md:text-right text-center md:pr-6 text-sm text-gray-300 reveal">
+
+<div>
+<h4 class="text-emerald-400 font-semibold mb-2">Client</h4>
+<p>Frontend / Postman / Mobile App sending HTTP requests.</p>
+</div>
+
+<div>
+<h4 class="text-emerald-400 font-semibold mb-2">Controller</h4>
+<p>Handles REST endpoints and request mapping.</p>
+</div>
+
+<div>
+<h4 class="text-emerald-400 font-semibold mb-2">Service</h4>
+<p>Contains business logic & validation rules.</p>
+</div>
+
+<div>
+<h4 class="text-emerald-400 font-semibold mb-2">Repository</h4>
+<p>Interacts with database via ORM / JDBC.</p>
+</div>
+
+<div>
+<h4 class="text-emerald-400 font-semibold mb-2">Database</h4>
+<p>Stores structured relational data.</p>
+</div>
+
+</div>
+
+<!-- CENTER FLOW (FIXED & BALANCED) -->
+<div class="md:col-span-6 reveal flex justify-center">
+
+<div class="glass px-12 py-14 rounded-2xl w-full max-w-2xl">
+
+<svg width="100%" height="520" viewBox="0 0 600 520">
+
+<!-- Client -->
+<rect x="175" y="20" width="250" height="70" rx="18" fill="#10b981"/>
+<text x="300" y="60" text-anchor="middle" fill="white" font-size="18" font-weight="600">Client</text>
+
+<!-- Controller -->
+<rect x="175" y="120" width="250" height="70" rx="18" fill="#22d3ee"/>
+<text x="300" y="160" text-anchor="middle" fill="black" font-size="18" font-weight="600">Controller</text>
+
+<!-- Service -->
+<rect x="175" y="220" width="250" height="70" rx="18" fill="#34d399"/>
+<text x="300" y="260" text-anchor="middle" fill="black" font-size="18" font-weight="600">Service</text>
+
+<!-- Repository -->
+<rect x="175" y="320" width="250" height="70" rx="18" fill="#6ee7b7"/>
+<text x="300" y="360" text-anchor="middle" fill="black" font-size="18" font-weight="600">Repository</text>
+
+<!-- Database -->
+<rect x="175" y="420" width="250" height="70" rx="18" fill="#059669"/>
+<text x="300" y="460" text-anchor="middle" fill="white" font-size="18" font-weight="600">Database</text>
+
+<!-- Arrows -->
+<line x1="300" y1="90" x2="300" y2="120" stroke="white" stroke-width="3"/>
+<line x1="300" y1="190" x2="300" y2="220" stroke="white" stroke-width="3"/>
+<line x1="300" y1="290" x2="300" y2="320" stroke="white" stroke-width="3"/>
+<line x1="300" y1="390" x2="300" y2="420" stroke="white" stroke-width="3"/>
+
+</svg>
+
+</div>
+</div>
+
+<!-- RIGHT SIDE -->
+<div class="md:col-span-3 space-y-12 text-center md:text-left md:pl-6 text-sm text-gray-300 reveal">
+
+<div>
+<h4 class="text-emerald-400 font-semibold mb-2">HTTP Layer</h4>
+<p>Processes GET, POST, PUT, DELETE requests.</p>
+</div>
+
+<div>
+<h4 class="text-emerald-400 font-semibold mb-2">Routing</h4>
+<p>Maps URL endpoints to controller methods.</p>
+</div>
+
+<div>
+<h4 class="text-emerald-400 font-semibold mb-2">Business Rules</h4>
+<p>Handles validation & authentication logic.</p>
+</div>
+
+<div>
+<h4 class="text-emerald-400 font-semibold mb-2">Data Access</h4>
+<p>Executes queries using JPA / Hibernate / JDBC.</p>
+</div>
+
+<div>
+<h4 class="text-emerald-400 font-semibold mb-2">Persistence</h4>
+<p>Ensures ACID-compliant data storage.</p>
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+<!-- EXPERIENCE -->
+<section id="experience" class="py-28 bg-gray-800/40">
+<div class="max-w-5xl mx-auto px-6">
+<h2 class="text-4xl font-bold text-center mb-24">
+<span class="gradient-text">Experience</span>
+</h2>
+<div class="relative">
+
+<div class="absolute left-4 md:left-1/2 md:-translate-x-1/2 h-full w-1 bg-emerald-500"></div>
+
+<!-- ITEM 1 -->
+<div class="mb-16 md:flex md:justify-start w-full relative">
+<div class="md:w-1/2 md:pr-12 ml-12 md:ml-0 text-left md:text-right reveal">
+<h3 class="text-xl font-semibold">Java Developer Intern – Oasis Infobyte</h3>
+<p class="text-sm text-emerald-400 mb-4">2024</p>
+<ul class="text-gray-300 text-sm space-y-2">
+<li>Built ATM Interface using OOP principles</li>
+<li>Implemented transaction logic & validation</li>
+<li>Strengthened modular design</li>
+<li>Improved debugging & logical thinking</li>
+</ul>
+</div>
+<div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 mt-2 w-4 h-4 bg-emerald-500 rounded-full border-4 border-gray-900"></div>
+</div>
+
+<!-- ITEM 2 -->
+<div class="mb-16 md:flex md:justify-end w-full relative">
+<div class="md:w-1/2 md:pl-12 ml-12 md:ml-0 text-left reveal">
+<h3 class="text-xl font-semibold">SmartInternz – Cloud & AI Labs</h3>
+<p class="text-sm text-emerald-400 mb-4">2024</p>
+<ul class="text-gray-300 text-sm space-y-2">
+<li>Completed Google Cloud labs</li>
+<li>Worked with Gemini & Vertex AI</li>
+<li>Understood cloud deployment</li>
+<li>Built backend learning foundation</li>
+</ul>
+</div>
+<div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 mt-2 w-4 h-4 bg-emerald-500 rounded-full border-4 border-gray-900"></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-28 bg-gray-900/60">
+<div class="max-w-6xl mx-auto px-6">
+<h2 class="text-4xl font-bold text-center mb-20">
+Let's <span class="gradient-text">Connect</span>
+</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
+
+<!-- LEFT SIDE - FORM -->
+<div class="glass p-10 rounded-2xl shadow-xl reveal">
+<form action="https://formsubmit.co/suhailkhan6669@gmail.com" method="POST" class="space-y-6">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html">
+<div>
+<label class="block mb-2 text-sm text-gray-400">Your Name</label>
+<input type="text" name="name" required
+class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400 transition">
+</div>
+<div>
+<label class="block mb-2 text-sm text-gray-400">Your Email</label>
+<input type="email" name="email" required
+class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400 transition">
+</div>
+<div>
+<label class="block mb-2 text-sm text-gray-400">Message</label>
+<textarea name="message" rows="5" required
+class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400 transition"></textarea>
+</div>
+<button type="submit"
+class="w-full py-3 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-400 hover:opacity-90 transition font-semibold shadow-lg">
+Send Message
+</button>
+</form>
+</div>
+
+<!-- RIGHT SIDE - INFO -->
+<div class="reveal space-y-10">
+<div class="glass p-8 rounded-2xl shadow-xl">
+<h3 class="text-xl font-semibold mb-6 text-emerald-400">Contact Information</h3>
+<div class="space-y-5 text-gray-300">
+<div class="flex items-center gap-4">
+<i class="fas fa-envelope text-emerald-400 text-xl"></i>
+<span>suhailkhan6669@gmail.com</span>
+</div>
+<div class="flex items-center gap-4">
+<i class="fas fa-map-marker-alt text-emerald-400 text-xl"></i>
+<span>Ghaziabad, Uttar Pradesh, India</span>
+</div>
+<div class="flex items-center gap-4">
+<i class="fas fa-code text-emerald-400 text-xl"></i>
+<span>Backend Developer – Java & REST APIs</span>
+</div>
+</div>
+</div>
+
+<!-- SOCIAL LINKS -->
+<div class="glass p-8 rounded-2xl shadow-xl text-center">
+<h3 class="text-lg mb-6 text-gray-300">Connect Online</h3>
+<div class="flex justify-center gap-10 text-3xl">
+<a href="https://github.com/suhailkhhhan/" target="_blank"
+class="hover:text-emerald-400 transition transform hover:scale-110">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/suhail-khan-053a27372" target="_blank"
+class="hover:text-emerald-400 transition transform hover:scale-110">
+<i class="fab fa-linkedin"></i>
+</a>
+
+<a href="mailto:suhailkhan6669@gmail.com"
+class="hover:text-emerald-400 transition transform hover:scale-110">
+<i class="fas fa-paper-plane"></i>
+</a>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 text-center border-t border-gray-800 bg-black">
+<p class="text-gray-500 text-sm">
+© 2025 Suhail Khan. Built with focus on Backend Engineering.
+</p>
+</footer>
+
+<script>
+function reveal(){
+const reveals=document.querySelectorAll('.reveal');
+reveals.forEach(el=>{
+const windowHeight=window.innerHeight;
+const elementTop=el.getBoundingClientRect().top;
+if(elementTop<windowHeight-100){
+el.classList.add('active');
+}
+});
+}
+window.addEventListener('scroll',reveal);
+window.addEventListener('load',reveal);
+</script>
+</body>
+</html>
