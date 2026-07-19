@@ -1,111 +1,106 @@
-# Suhail Khan  
-Backend Engineer | Java | Spring Boot | REST APIs | FastAPI
+# Suhail Khan
 
-Backend-focused developer building scalable, secure and structured systems using layered architecture and database-driven design.
+**Data Analyst | SQL | Python | Power BI | Excel | Data Visualization**
 
----
-
-## 🧠 Engineering Focus
-
-- RESTful API Development
-- Layered Architecture (Controller → Service → Repository)
-- JWT Authentication & Role-Based Access
-- Database Design & Query Optimization
-- Clean Code & Modular Design
-- Backend Security Fundamentals
+Passionate Data Analyst with a B.Tech in Computer Science, experienced in transforming raw data into actionable business insights. Skilled in SQL, Python, Excel, Power BI, and data visualization, with hands-on experience building end-to-end analytics projects involving data cleaning, exploratory data analysis (EDA), dashboard development, and KPI reporting.
 
 ---
 
-## 🚀 Featured Backend Projects
+## 📊 Core Skills
 
-### 🔹 MediFlow System
-Spring Boot REST backend with JWT authentication and role-based access control.
+* SQL & Database Querying
+* Python (Pandas, NumPy, Matplotlib)
+* Microsoft Excel
+* Power BI
+* Data Cleaning & Transformation
+* Exploratory Data Analysis (EDA)
+* Dashboard Development
+* Business Insights & KPI Reporting
 
-**Tech Stack:**  
-Spring Boot • Hibernate • MySQL • JWT
+---
+
+## 🚀 Featured Projects
+
+### 🔹 OLA Ride Analytics Dashboard
+
+**Tech Stack:** SQL • Python • Power BI • Excel
 
 **Highlights:**
-- Secure REST APIs
-- Role-based authorization
-- Service-layer validation
-- Structured layered architecture
 
-👉 Repository:  
-https://github.com/suhailkhhhan/Medi-Flow
+* Cleaned and transformed ride booking data.
+* Analyzed booking trends, cancellations, revenue, and customer behavior.
+* Built an interactive Power BI dashboard with business KPIs.
+* Generated actionable insights to support decision-making.
+
+👉 Repository:
+(Your GitHub link)
 
 ---
 
-### 🔹 User Notes API
-Secure RESTful backend built using FastAPI and PostgreSQL.
+### 🔹 Customer Shopping Behavior Analysis
 
-**Tech Stack:**  
-FastAPI • PostgreSQL • JWT • OAuth2
+**Tech Stack:** Python • SQL • Power BI • Excel
 
 **Highlights:**
-- User authentication & token validation
-- Protected CRUD endpoints
-- Password hashing
-- User-specific data isolation
 
-👉 Repository:  
-https://github.com/suhailkhhhan/User-Notes-API
+* Performed data cleaning and exploratory data analysis on customer purchase data.
+* Identified purchasing patterns and customer segments.
+* Created interactive dashboards to visualize sales performance and customer behavior.
+* Delivered business recommendations based on data insights.
+
+ Repository:
+(Your GitHub link)
 
 ---
 
-### 🔹 Hotel Reservation System
-Java-based backend system using JDBC and DAO pattern.
+### 🔹 Vendor Performance Analysis
 
-**Tech Stack:**  
-Java • JDBC • MySQL • DAO Pattern
+**Tech Stack:** SQL • Python • Excel • Power BI
 
 **Highlights:**
-- Room availability validation
-- Structured database interaction
-- Transactional booking logic
-- Modular code structure
 
-👉 Repository:  
-https://github.com/suhailkhhhan/Hotel-Reservation
+* Evaluated vendor performance using inventory and sales data.
+* Analyzed purchasing costs, sales, and profitability.
+* Built reports and dashboards for performance monitoring.
 
----
-
-## 🛠 Technical Stack
-
-**Languages:**  
-Java, Python, SQL
-
-**Backend Frameworks:**  
-Spring Boot, FastAPI
-
-**Database:**  
-MySQL, PostgreSQL
-
-**Security:**  
-JWT, OAuth2, Password Hashing
-
-**Tools:**  
-Git, Docker (Basic), Postman
+ Repository:
+(Your GitHub link)
 
 ---
 
-## 📊 What I’m Currently Improving
+##  Technical Skills
 
-- API performance optimization
-- Advanced Spring Security
-- Dockerized backend deployment
-- Clean architecture patterns
-- Production-grade logging & exception handling
+**Languages:** SQL, Python
 
----
+**Libraries:** Pandas, NumPy, Matplotlib
 
-## 📫 Connect
+**Visualization:** Power BI, Excel
 
-LinkedIn:  
-https://www.linkedin.com/in/suhail-khan-053a27372  
+**Databases:** MySQL
 
-Portfolio:  
-(Add deployed link here)
+**Tools:** Jupyter Notebook, Git, GitHub
 
 ---
 
-> Focused on building backend systems that are structured, secure, and production-ready.
+##  Currently Learning
+
+* Advanced SQL
+* Power BI (DAX & Power Query)
+* Python for Data Analytics
+* Statistics for Data Analysis
+* Business Analytics
+* Machine Learning Fundamentals
+
+---
+
+##  Connect
+
+**LinkedIn:**
+https://www.linkedin.com/in/suhailkhan-india/
+
+**Portfolio:**
+(Add your portfolio link here)
+
+---
+
+> Turning data into meaningful insights that support better business decisions.
