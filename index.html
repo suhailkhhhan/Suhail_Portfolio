@@ -18,14 +18,12 @@ body{
   scroll-behavior:smooth;
 }
 
-/* Glass */
 .glass{
   background:rgba(30,41,59,0.6);
   backdrop-filter:blur(14px);
   border:1px solid rgba(255,255,255,0.08);
 }
 
-/* Reveal */
 .reveal{
   opacity:0;
   transform:translateY(40px);
@@ -36,31 +34,13 @@ body{
   transform:translateY(0);
 }
 
-/* Gradient text */
 .gradient-text{
   background:linear-gradient(90deg,#22d3ee,#10b981);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 
-/* Project slider */
-.project-slider{
-  display:flex;
-  gap:24px;
-  overflow-x:auto;
-  scroll-snap-type:x mandatory;
-  padding-bottom:10px;
-}
-.project-slider::-webkit-scrollbar{
-  height:8px;
-}
-.project-slider::-webkit-scrollbar-thumb{
-  background:#10b981;
-  border-radius:10px;
-}
 .project-card{
-  min-width:350px;
-  scroll-snap-align:start;
   transition:.3s;
 }
 .project-card:hover{
@@ -68,7 +48,6 @@ body{
   box-shadow:0 15px 40px rgba(16,185,129,0.3);
 }
 
-/* Navbar underline */
 .nav-link{
   position:relative;
 }
@@ -85,6 +64,20 @@ body{
 .nav-link:hover::after{
   width:100%;
 }
+
+/* Placeholder callouts for content Suhail still needs to fill in with real numbers */
+.fill-in{
+  color:#fbbf24;
+  border:1px dashed rgba(251,191,36,0.5);
+  border-radius:6px;
+  padding:1px 6px;
+  font-style:italic;
+}
+
+.dash-placeholder{
+  background:repeating-linear-gradient(45deg,#1e293b,#1e293b 10px,#0f172a 10px,#0f172a 20px);
+  border:1px dashed rgba(16,185,129,0.4);
+}
 </style>
 </head>
 
@@ -93,22 +86,16 @@ body{
 <!-- NAVBAR -->
 <nav class="fixed w-full bg-gray-900/90 backdrop-blur-md z-50 py-4 border-b border-gray-800">
     <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-
-        <!-- Logo -->
-        <div class="text-xl font-bold gradient-text">
-            Suhail Khan
-        </div>
-
-        <!-- Navigation -->
+        <div class="text-xl font-bold gradient-text">Suhail Khan</div>
         <div class="hidden md:flex space-x-8">
             <a href="#home" class="nav-link">Home</a>
-            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#projects" class="nav-link">Case Studies</a>
             <a href="#skills" class="nav-link">Skills</a>
-            <a href="#workflow" class="nav-link">Analytics Process</a>
+            <a href="#workflow" class="nav-link">Process</a>
             <a href="#experience" class="nav-link">Experience</a>
+            <a href="#other" class="nav-link">Engineering Work</a>
             <a href="#contact" class="nav-link">Contact</a>
         </div>
-
     </div>
 </nav>
 
@@ -118,30 +105,30 @@ body{
 
 <div class="reveal">
 <h1 class="text-5xl font-bold mb-4">Suhail Khan</h1>
-<h2 class="text-2xl text-emerald-400 mb-6">Data Analyst | SQL | Python | Power BI | Excel</h2>
+<h2 class="text-2xl text-emerald-400 mb-6">Data Analyst — SQL, Python &amp; Power BI</h2>
 
 <p class="text-gray-300 leading-relaxed mb-8">
-Data Analyst passionate about transforming raw data into meaningful business insights. Experienced in data cleaning, SQL querying, dashboard development, KPI analysis, and data visualization using Python, SQL, Excel, and Power BI.
+I turn raw, messy data into business decisions — cleaning and modeling data in SQL and Python, then building Power BI dashboards that answer a specific question rather than just displaying numbers.
 </p>
 
 <div class="flex gap-4">
-<a href="Suhail_Khan_Data_Analyst.pdf"
-   target="_blank"
+<a href="Suhail_Khan_Data_Analyst_Resume.pdf" target="_blank"
    class="px-6 py-3 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 transition font-medium">
    Download Resume
 </a>
-<a href="https://github.com/suhailkhhhan" target="_blank" class="px-6 py-3 border border-emerald-400 text-emerald-400 rounded-md hover:bg-emerald-400 hover:text-gray-900 transition">GitHub</a>
+<a href="https://github.com/suhailkhhhan/" target="_blank"
+   class="px-6 py-3 border border-emerald-400 text-emerald-400 rounded-md hover:bg-emerald-400 hover:text-gray-900 transition">GitHub</a>
 </div>
 
-<!-- Stats -->
+<!-- Stats: scale of the work, not project count -->
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 text-center sm:text-left">
 <div>
-<h3 class="text-3xl font-bold text-emerald-400">2+</h3>
-<p class="text-gray-400 text-sm">Data Analysis Projects</p>
+<h3 class="text-3xl font-bold text-emerald-400">3,900+</h3>
+<p class="text-gray-400 text-sm">Customer records analyzed end-to-end</p>
 </div>
 <div>
-<h3 class="text-3xl font-bold text-emerald-400">2+</h3>
-<p class="text-gray-400 text-sm">Data Visualization Dashboards</p>
+<h3 class="text-3xl font-bold text-emerald-400">SQL → BI</h3>
+<p class="text-gray-400 text-sm">Full pipeline: cleaning, querying, dashboarding</p>
 </div>
 </div>
 
@@ -156,174 +143,99 @@ Data Analyst passionate about transforming raw data into meaningful business ins
 </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- PROJECTS / CASE STUDIES -->
 <section id="projects" class="py-24 bg-gray-900/60">
 <div class="max-w-7xl mx-auto px-6">
-<h2 class="text-4xl font-bold text-center mb-20">
-<span class="gradient-text">Featured Data Analysis Projects</span>
+<h2 class="text-4xl font-bold text-center mb-6">
+<span class="gradient-text">Analytics Case Studies</span>
 </h2>
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-  <!-- Project 1 -->
-<div class="glass p-8 rounded-2xl project-card reveal">
-
-<h3 class="text-2xl font-bold mb-4 text-emerald-400">
-Customer Shopping Behavior Analysis
-</h3>
-
-<p class="text-gray-300 mb-6 leading-relaxed">
-End-to-end data analytics project analyzing <strong>3,900+ customer purchase records</strong>
-to uncover customer behavior, sales trends, revenue patterns, and product performance
-using Python, SQL, PostgreSQL, Excel, and Power BI.
+<p class="text-center text-gray-400 max-w-2xl mx-auto mb-20">
+Every project below follows the same loop: a business question, what I did with the data, and what I'd tell a stakeholder.
 </p>
 
-<div class="mb-4">
-<h4 class="font-semibold text-sm text-gray-400 mb-2">Tech Stack</h4>
-<p>Python • SQL • PostgreSQL • Power BI • Excel • Pandas</p>
-</div>
+<div class="grid grid-cols-1 gap-10">
 
-<div class="mb-6">
-<h4 class="font-semibold text-sm text-gray-400 mb-2">Key Highlights</h4>
+  <!-- CASE STUDY 1: Customer Shopping Behavior -->
+<div class="glass p-10 rounded-2xl project-card reveal">
 
-<ul class="list-disc ml-6 text-gray-300 text-sm space-y-1">
-<li>Analyzed 3,900+ customer purchase records</li>
-<li>Built interactive Power BI dashboards with KPIs</li>
-<li>Performed SQL-based business analysis</li>
-<li>Generated actionable customer and revenue insights</li>
-</ul>
-
-</div>
-
-<div class="flex gap-3">
-
-<a href="https://github.com/suhailkhhhan/customer_behavior_analysis"
-target="_blank"
-class="inline-flex items-center gap-2 px-5 py-2 bg-emerald-500 rounded-md hover:bg-emerald-600 transition">
-<i class="fab fa-github"></i>
-GitHub
+<div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+<h3 class="text-2xl font-bold text-emerald-400">Customer Shopping Behavior Analysis</h3>
+<a href="https://github.com/suhailkhhhan/customer_behavior_analysis" target="_blank"
+class="inline-flex items-center gap-2 px-5 py-2 bg-emerald-500 rounded-md hover:bg-emerald-600 transition text-sm">
+<i class="fab fa-github"></i> View Code
 </a>
-
 </div>
 
-</div>
+<p class="text-gray-300 mb-2"><strong>Tech:</strong> Python • Pandas • SQL • PostgreSQL • Power BI • Excel</p>
 
-<!-- Project 2 -->
-<div class="glass p-8 rounded-2xl project-card reveal">
+<div class="grid md:grid-cols-2 gap-8 mt-6">
+<div>
+<h4 class="font-semibold text-emerald-400 mb-2 text-sm uppercase tracking-wide">Business Question</h4>
+<p class="text-gray-300 text-sm mb-6">Business-focused analysis and actionable recommendations based on project results.</p>
 
-<h3 class="text-2xl font-bold mb-4 text-emerald-400">
-OLA Ride Analytics Dashboard
-</h3>
-
-<p class="text-gray-300 mb-6 leading-relaxed">
-Analyzed ride booking data to identify booking trends,
-cancellations, revenue, customer ratings, and payment behavior
-through SQL analysis and interactive Power BI dashboards.
-</p>
-
-<div class="mb-4">
-<h4 class="font-semibold text-sm text-gray-400 mb-2">Tech Stack</h4>
-<p>Python • MySQL • Power BI • SQL</p>
-</div>
-
-<div class="mb-6">
-<h4 class="font-semibold text-sm text-gray-400 mb-2">Key Highlights</h4>
-
-<ul class="list-disc ml-6 text-gray-300 text-sm space-y-1">
-<li>Cleaned and transformed ride booking data</li>
-<li>Analyzed cancellations, revenue, and ratings</li>
-<li>Visualized booking trends and payment methods</li>
-</ul>
-
-</div>
-
-<div class="flex gap-3">
-
-<a href="https://github.com/suhailkhhhan/ola-ride-analytics-dashboard"
-target="_blank"
-class="inline-flex items-center gap-2 px-5 py-2 bg-emerald-500 rounded-md hover:bg-emerald-600 transition">
-<i class="fab fa-github"></i>
-GitHub
-</a>
-
-</div>
-
-</div>
-
-
-<!-- Project 3 -->
-<div class="glass p-8 rounded-2xl project-card reveal">
-
-<h3 class="text-2xl font-bold mb-4 text-emerald-400">
-URL Shortener
-</h3>
-
-<p class="text-gray-300 mb-6 leading-relaxed">
-Developed a full-stack URL shortening application that generates
-unique short links, redirects users efficiently, and tracks
-URL usage with a relational database backend.
-</p>
-
-<div class="mb-4">
-<h4 class="font-semibold text-sm text-gray-400 mb-2">Tech Stack</h4>
-<p>Java • Spring Boot • MySQL • REST API </p>
-</div>
-
-<div class="mb-6">
-<h4 class="font-semibold text-sm text-gray-400 mb-2">Key Highlights</h4>
-
-<ul class="list-disc ml-6 text-gray-300 text-sm space-y-1">
-<li>Generated unique short URLs</li>
-<li>Implemented URL redirection service</li>
-<li>Integrated MySQL for persistent storage</li>
-<li>Built RESTful backend using Spring Boot</li>
-</ul>
-
-</div>
-
-<div class="flex gap-3">
-
-<a href="https://github.com/suhailkhhhan/url-shortener-springboot"
-target="_blank"
-class="inline-flex items-center gap-2 px-5 py-2 bg-emerald-500 rounded-md hover:bg-emerald-600 transition">
-<i class="fab fa-github"></i>
-GitHub
-</a>
-
-</div>
-
-</div>
-
-<!-- Project 4 -->
-<div class="glass p-8 rounded-2xl project-card reveal">
-<h3 class="text-2xl font-bold mb-4 text-emerald-400">MediFlow System</h3>
-
-<p class="text-gray-300 mb-6 leading-relaxed">
-Spring Boot REST backend with layered architecture:
-Controller → Service → Repository.
-Implements JWT authentication and role-based access control.
-</p>
-
-<div class="mb-4">
-<h4 class="font-semibold text-sm text-gray-400 mb-2">Tech Stack</h4>
-<p>Spring Boot • Hibernate • MySQL • JWT</p>
-</div>
-
-<div class="mb-6">
-<h4 class="font-semibold text-sm text-gray-400 mb-2">Key Features</h4>
-<ul class="list-disc ml-6 text-gray-300 text-sm space-y-1">
-<li>Secure REST APIs</li>
-<li>Role-based access</li>
-<li>Token authentication</li>
-<li>Service-layer validation</li>
+<h4 class="font-semibold text-emerald-400 mb-2 text-sm uppercase tracking-wide">Approach</h4>
+<ul class="list-disc ml-5 text-gray-300 text-sm space-y-1">
+<li>Cleaned and validated 3,900+ purchase records (deduplication, type correction, missing-value handling)</li>
+<li>Loaded structured data into PostgreSQL and wrote SQL queries for segment, category, and revenue breakdowns</li>
+<li>Used Pandas for cohort-level trend analysis</li>
+<li>Built an interactive Power BI dashboard with drill-down filters by segment and time period</li>
 </ul>
 </div>
 
-<a href="https://github.com/suhailkhhhan/Medi-Flow" target="_blank"
-class="inline-flex items-center gap-2 px-5 py-2 bg-emerald-500 rounded-md hover:bg-emerald-600 transition">
-<i class="fab fa-github"></i>
-GitHub
+<div>
+<h4 class="font-semibold text-emerald-400 mb-2 text-sm uppercase tracking-wide">Key Finding</h4>
+<p class="text-gray-300 text-sm mb-6">Business-focused analysis and actionable recommendations based on project results.</p>
+
+<h4 class="font-semibold text-emerald-400 mb-2 text-sm uppercase tracking-wide">Recommendation</h4>
+<p class="text-gray-300 text-sm">Business-focused analysis and actionable recommendations based on project results.</p>
+</div>
+</div>
+
+<div class="dash-placeholder rounded-lg mt-8 flex items-center justify-center text-gray-400 text-sm">
+<img src="assets/Image/dashboard-placeholder.png" alt="Dashboard Screenshot" class="w-full h-full object-contain">
+</div>
+
+</div>
+
+  <!-- CASE STUDY 2: OLA Ride Analytics -->
+<div class="glass p-10 rounded-2xl project-card reveal">
+
+<div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+<h3 class="text-2xl font-bold text-emerald-400">OLA Ride Analytics Dashboard</h3>
+<a href="https://github.com/suhailkhhhan/ola-ride-analytics-dashboard" target="_blank"
+class="inline-flex items-center gap-2 px-5 py-2 bg-emerald-500 rounded-md hover:bg-emerald-600 transition text-sm">
+<i class="fab fa-github"></i> View Code
 </a>
+</div>
+
+<p class="text-gray-300 mb-2"><strong>Tech:</strong> Python • MySQL • SQL • Power BI</p>
+
+<div class="grid md:grid-cols-2 gap-8 mt-6">
+<div>
+<h4 class="font-semibold text-emerald-400 mb-2 text-sm uppercase tracking-wide">Business Question</h4>
+<p class="text-gray-300 text-sm mb-6">Business-focused analysis and actionable recommendations based on project results.</p>
+
+<h4 class="font-semibold text-emerald-400 mb-2 text-sm uppercase tracking-wide">Approach</h4>
+<ul class="list-disc ml-5 text-gray-300 text-sm space-y-1">
+<li>Cleaned and transformed raw ride booking data in MySQL</li>
+<li>Wrote SQL queries to analyze cancellations, revenue, and rating trends</li>
+<li>Built a Power BI dashboard visualizing booking trends and payment method mix</li>
+</ul>
+</div>
+
+<div>
+<h4 class="font-semibold text-emerald-400 mb-2 text-sm uppercase tracking-wide">Key Finding</h4>
+<p class="text-gray-300 text-sm mb-6">Business-focused analysis and actionable recommendations based on project results.</p>
+
+<h4 class="font-semibold text-emerald-400 mb-2 text-sm uppercase tracking-wide">Recommendation</h4>
+<p class="text-gray-300 text-sm">Business-focused analysis and actionable recommendations based on project results.</p>
+</div>
+</div>
+
+<div class="dash-placeholder rounded-lg mt-8 flex items-center justify-center text-gray-400 text-sm">
+<img src="assets/Image/dashboard-placeholder2.png" alt="Dashboard Screenshot" class="w-full h-full object-contain">
+</div>
+
 </div>
 
 </div>
@@ -339,67 +251,54 @@ GitHub
 
 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10">
 
-  <!-- Python -->
 <div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-16 mx-auto mb-4">
 <p>Python</p>
 </div>
 
-<!-- SQL -->
 <div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-16 mx-auto mb-4">
 <p>SQL</p>
 </div>
 
-<!-- Power BI -->
 <div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
 <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" class="w-16 h-16 mx-auto mb-4">
 <p>Power BI</p>
 </div>
 
-<!-- Excel -->
 <div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" class="w-16 mx-auto mb-4">
 <p>Excel</p>
 </div>
 
-
-<!-- MySQL -->
-  <div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-16 mx-auto mb-4">
-  <p>MySQL</p>
-  </div>
-
-<!-- Java -->
 <div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-16 mx-auto mb-4">
-<p>Java</p>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-16 mx-auto mb-4">
+<p>MySQL</p>
 </div>
 
-<!-- Spring Boot -->
-<div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" class="w-16 mx-auto mb-4">
-<p>Spring Boot</p>
-</div>
-
-
-<!-- PostgreSQL -->
 <div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="w-16 mx-auto mb-4">
 <p>PostgreSQL</p>
 </div>
 
-<!-- HTML -->
+<div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-16 mx-auto mb-4">
+<p>Java</p>
+</div>
+
+<div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" class="w-16 mx-auto mb-4">
+<p>Spring Boot</p>
+</div>
+
 <div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-16 mx-auto mb-4">
 <p>HTML</p>
 </div>
 
-<!-- CSS -->
 <div class="glass p-6 rounded-xl reveal hover:scale-105 hover:shadow-emerald-500/30 hover:shadow-xl transition duration-300">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-16 mx-auto mb-4">
 <p>CSS</p>
-</div>
 </div>
 </div>
 </div>
@@ -415,135 +314,51 @@ GitHub
 
 <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
 
-<!-- LEFT SIDE -->
 <div class="md:col-span-3 space-y-12 md:text-right text-center md:pr-6 text-sm text-gray-300 reveal">
-
-<div>
-<h4 class="text-emerald-400 font-semibold mb-2">Raw Data</h4>
-<p>Collected data from CSV, Excel files, SQL databases, and business datasets.</p>
+<div><h4 class="text-emerald-400 font-semibold mb-2">Raw Data</h4><p>Collected data from CSV, Excel files, SQL databases, and business datasets.</p></div>
+<div><h4 class="text-emerald-400 font-semibold mb-2">Data Cleaning</h4><p>Removed duplicates, handled missing values, corrected data types, and prepared clean datasets.</p></div>
+<div><h4 class="text-emerald-400 font-semibold mb-2">Database</h4><p>Stored structured data in MySQL/PostgreSQL and performed SQL queries for analysis.</p></div>
+<div><h4 class="text-emerald-400 font-semibold mb-2">Data Analysis</h4><p>Used Python, Pandas, NumPy, and SQL to analyze trends, KPIs, and business metrics.</p></div>
+<div><h4 class="text-emerald-400 font-semibold mb-2">Visualization</h4><p>Created interactive Power BI dashboards to communicate insights effectively.</p></div>
+<div><h4 class="text-emerald-400 font-semibold mb-2">Business Insights</h4><p>Delivered actionable insights to support strategic business decisions.</p></div>
 </div>
 
-<div>
-<h4 class="text-emerald-400 font-semibold mb-2">Data Cleaning</h4>
-<p>Removed duplicates, handled missing values, corrected data types, and prepared clean datasets.</p>
-</div>
-
-<div>
-<h4 class="text-emerald-400 font-semibold mb-2">Database</h4>
-<p>Stored structured data in MySQL/PostgreSQL and performed SQL queries for analysis.</p>
-</div>
-
-<div>
-<h4 class="text-emerald-400 font-semibold mb-2">Data Analysis</h4>
-<p>Used Python, Pandas, NumPy, and SQL to analyze trends, KPIs, and business metrics.</p>
-</div>
-
-<div>
-<h4 class="text-emerald-400 font-semibold mb-2">Visualization</h4>
-<p>Created interactive Power BI dashboards to communicate insights effectively.</p>
-</div>
-
-<div>
-<h4 class="text-emerald-400 font-semibold mb-2">Business Insights</h4>
-<p>Delivered actionable insights to support strategic business decisions.</p>
-</div>
-
-</div>
-
-<!-- CENTER -->
 <div class="md:col-span-6 reveal flex justify-center">
-
 <div class="glass px-12 py-14 rounded-2xl w-full max-w-2xl">
-
 <svg width="100%" height="600" viewBox="0 0 600 600">
-
-<!-- Raw Data -->
 <rect x="175" y="20" width="250" height="60" rx="18" fill="#10b981"/>
-<text x="300" y="57" text-anchor="middle" fill="white" font-size="18" font-weight="600">
-Raw Data
-</text>
-
-<!-- Cleaning -->
+<text x="300" y="57" text-anchor="middle" fill="white" font-size="18" font-weight="600">Raw Data</text>
 <rect x="175" y="105" width="250" height="60" rx="18" fill="#22d3ee"/>
-<text x="300" y="142" text-anchor="middle" fill="black" font-size="18" font-weight="600">
-Data Cleaning
-</text>
-
-<!-- Database -->
+<text x="300" y="142" text-anchor="middle" fill="black" font-size="18" font-weight="600">Data Cleaning</text>
 <rect x="175" y="190" width="250" height="60" rx="18" fill="#34d399"/>
-<text x="300" y="227" text-anchor="middle" fill="black" font-size="18" font-weight="600">
-SQL Database
-</text>
-
-<!-- Analysis -->
+<text x="300" y="227" text-anchor="middle" fill="black" font-size="18" font-weight="600">SQL Database</text>
 <rect x="175" y="275" width="250" height="60" rx="18" fill="#6ee7b7"/>
-<text x="300" y="312" text-anchor="middle" fill="black" font-size="18" font-weight="600">
-Data Analysis
-</text>
-
-<!-- Dashboard -->
+<text x="300" y="312" text-anchor="middle" fill="black" font-size="18" font-weight="600">Data Analysis</text>
 <rect x="175" y="360" width="250" height="60" rx="18" fill="#14b8a6"/>
-<text x="300" y="397" text-anchor="middle" fill="white" font-size="18" font-weight="600">
-Power BI Dashboard
-</text>
-
-<!-- Insights -->
+<text x="300" y="397" text-anchor="middle" fill="white" font-size="18" font-weight="600">Power BI Dashboard</text>
 <rect x="175" y="445" width="250" height="60" rx="18" fill="#059669"/>
-<text x="300" y="482" text-anchor="middle" fill="white" font-size="18" font-weight="600">
-Business Insights
-</text>
-
-<!-- Arrows -->
+<text x="300" y="482" text-anchor="middle" fill="white" font-size="18" font-weight="600">Business Insights</text>
 <line x1="300" y1="80" x2="300" y2="105" stroke="white" stroke-width="3"/>
 <line x1="300" y1="165" x2="300" y2="190" stroke="white" stroke-width="3"/>
 <line x1="300" y1="250" x2="300" y2="275" stroke="white" stroke-width="3"/>
 <line x1="300" y1="335" x2="300" y2="360" stroke="white" stroke-width="3"/>
 <line x1="300" y1="420" x2="300" y2="445" stroke="white" stroke-width="3"/>
-
 </svg>
-
 </div>
 </div>
 
-<!-- RIGHT SIDE -->
 <div class="md:col-span-3 space-y-12 text-center md:text-left md:pl-6 text-sm text-gray-300 reveal">
-
-<div>
-<h4 class="text-emerald-400 font-semibold mb-2">Data Collection</h4>
-<p>Gathered structured and unstructured business data from multiple sources.</p>
-</div>
-
-<div>
-<h4 class="text-emerald-400 font-semibold mb-2">Data Preparation</h4>
-<p>Transformed raw data into analysis-ready datasets using Python and Excel.</p>
-</div>
-
-<div>
-<h4 class="text-emerald-400 font-semibold mb-2">SQL Processing</h4>
-<p>Performed filtering, joins, aggregations, and KPI calculations with SQL.</p>
-</div>
-
-<div>
-<h4 class="text-emerald-400 font-semibold mb-2">Exploratory Analysis</h4>
-<p>Identified trends, customer behavior, revenue patterns, and business opportunities.</p>
-</div>
-
-<div>
-<h4 class="text-emerald-400 font-semibold mb-2">Dashboard Development</h4>
-<p>Designed interactive Power BI dashboards with dynamic filters and visual reports.</p>
-</div>
-
-<div>
-<h4 class="text-emerald-400 font-semibold mb-2">Decision Making</h4>
-<p>Converted analytical findings into actionable business recommendations.</p>
-</div>
-
+<div><h4 class="text-emerald-400 font-semibold mb-2">Data Collection</h4><p>Gathered structured and unstructured business data from multiple sources.</p></div>
+<div><h4 class="text-emerald-400 font-semibold mb-2">Data Preparation</h4><p>Transformed raw data into analysis-ready datasets using Python and Excel.</p></div>
+<div><h4 class="text-emerald-400 font-semibold mb-2">SQL Processing</h4><p>Performed filtering, joins, aggregations, and KPI calculations with SQL.</p></div>
+<div><h4 class="text-emerald-400 font-semibold mb-2">Exploratory Analysis</h4><p>Identified trends, customer behavior, revenue patterns, and business opportunities.</p></div>
+<div><h4 class="text-emerald-400 font-semibold mb-2">Dashboard Development</h4><p>Designed interactive Power BI dashboards with dynamic filters and visual reports.</p></div>
+<div><h4 class="text-emerald-400 font-semibold mb-2">Decision Making</h4><p>Converted analytical findings into actionable business recommendations.</p></div>
 </div>
 
 </div>
 </div>
 </section>
-
 
 <!-- EXPERIENCE -->
 <section id="experience" class="py-28 bg-gray-800/40">
@@ -552,37 +367,63 @@ Business Insights
 <span class="gradient-text">Experience</span>
 </h2>
 <div class="relative">
-
 <div class="absolute left-4 md:left-1/2 md:-translate-x-1/2 h-full w-1 bg-emerald-500"></div>
 
-<!-- ITEM 1 -->
 <div class="mb-16 md:flex md:justify-start w-full relative">
 <div class="md:w-1/2 md:pr-12 ml-12 md:ml-0 text-left md:text-right reveal">
-<h3 class="text-xl font-semibold">Data Analyst Intern – Oasis Infobyte</h3>
+<h3 class="text-xl font-semibold">Java Developer Intern – Oasis Infobyte</h3>
 <p class="text-sm text-emerald-400 mb-4">2025</p>
 <ul class="text-gray-300 text-sm space-y-2">
-            <li>Cleaned and prepared datasets for analysis</li>
-            <li>Performed exploratory data analysis (EDA)</li>
-            <li>Created dashboards using Power BI</li>
-            <li>Analyzed data using SQL and Python</li>
+<li>Built core Java applications, including a number guessing game and an ATM interface simulation</li>
+<li>Applied OOP principles and control flow to solve structured programming tasks</li>
+<li>Practiced debugging and writing clean, modular Java code</li>
 </ul>
 </div>
 <div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 mt-2 w-4 h-4 bg-emerald-500 rounded-full border-4 border-gray-900"></div>
 </div>
 
-<!-- ITEM 2 -->
 <div class="mb-16 md:flex md:justify-end w-full relative">
 <div class="md:w-1/2 md:pl-12 ml-12 md:ml-0 text-left reveal">
-<h3 class="text-xl font-semibold">SmartInternz – Cloud & AI Labs</h3>
+<h3 class="text-xl font-semibold">SmartInternz – Cloud &amp; AI Labs</h3>
 <p class="text-sm text-emerald-400 mb-4">2024</p>
 <ul class="text-gray-300 text-sm space-y-2">
 <li>Completed Google Cloud labs</li>
-<li>Worked with Gemini & Vertex AI</li>
+<li>Worked with Gemini &amp; Vertex AI</li>
 <li>Understood cloud deployment</li>
 <li>Built backend learning foundation</li>
 </ul>
 </div>
 <div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 mt-2 w-4 h-4 bg-emerald-500 rounded-full border-4 border-gray-900"></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- OTHER / ENGINEERING PROJECTS: de-emphasized, clearly separated from the analyst story -->
+<section id="other" class="py-20 bg-gray-900/40">
+<div class="max-w-5xl mx-auto px-6">
+<h2 class="text-2xl font-bold text-center mb-3 text-gray-300">Also Built: Backend Engineering</h2>
+<p class="text-center text-gray-500 text-sm max-w-xl mx-auto mb-12">
+Outside of analytics, I also build the systems that generate data — useful context, kept separate from the analyst work above.
+</p>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+<div class="glass p-6 rounded-xl reveal">
+<h3 class="text-lg font-semibold text-gray-200 mb-2">URL Shortener</h3>
+<p class="text-gray-400 text-sm mb-3">Java • Spring Boot • MySQL • REST API</p>
+<p class="text-gray-400 text-sm mb-4">Full-stack URL shortening service with redirect handling and usage tracking on a relational backend.</p>
+<a href="https://github.com/suhailkhhhan/url-shortener-springboot" target="_blank"
+class="text-emerald-400 text-sm hover:underline"><i class="fab fa-github"></i> View Code</a>
+</div>
+
+<div class="glass p-6 rounded-xl reveal">
+<h3 class="text-lg font-semibold text-gray-200 mb-2">MediFlow System</h3>
+<p class="text-gray-400 text-sm mb-3">Spring Boot • Hibernate • MySQL • JWT</p>
+<p class="text-gray-400 text-sm mb-4">Layered REST backend (Controller → Service → Repository) with JWT auth and role-based access control.</p>
+<a href="https://github.com/suhailkhhhan/Medi-Flow" target="_blank"
+class="text-emerald-400 text-sm hover:underline"><i class="fab fa-github"></i> View Code</a>
 </div>
 
 </div>
@@ -598,65 +439,36 @@ Let's <span class="gradient-text">Connect</span>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
 
-<!-- LEFT SIDE - FORM -->
 <div class="glass p-10 rounded-2xl shadow-xl reveal">
-
 <form action="https://formsubmit.co/suhailkhan6669@gmail.com" method="POST" class="space-y-6">
-
-    <!-- Disable Captcha -->
     <input type="hidden" name="_captcha" value="false">
-
-    <!-- Email Subject -->
     <input type="hidden" name="_subject" value="New Portfolio Contact">
-
-    <!-- Email Template -->
     <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_autoresponse" value="Thank you for contacting me. I have received your message and will get back to you soon.">
+    <input type="hidden" name="_next" value="https://suhailkhhhan.github.io/Suhail_Portfolio/thanks.html">
 
-    <!-- Auto Reply -->
-    <input type="hidden" name="_autoresponse"
-        value="Thank you for contacting me. I have received your message and will get back to you soon.">
-
-    <!-- Redirect After Submit -->
-    <input type="hidden" name="_next"
-        value="https://suhailkhhhan.github.io/Suhail_Portfolio/thanks.html">
-
-    <!-- Name -->
     <div>
         <label class="block mb-2 text-sm text-gray-400">Your Name</label>
-        <input type="text"
-               name="name"
-               required
+        <input type="text" name="name" required
                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400 transition">
     </div>
-
-    <!-- Email -->
     <div>
         <label class="block mb-2 text-sm text-gray-400">Your Email</label>
-        <input type="email"
-               name="email"
-               required
+        <input type="email" name="email" required
                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400 transition">
     </div>
-
-    <!-- Message -->
     <div>
         <label class="block mb-2 text-sm text-gray-400">Message</label>
-        <textarea name="message"
-                  rows="5"
-                  required
+        <textarea name="message" rows="5" required
                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400 transition"></textarea>
     </div>
-
-    <!-- Submit Button -->
     <button type="submit"
         class="w-full py-3 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-400 hover:opacity-90 transition font-semibold shadow-lg">
         Send Message
     </button>
-
 </form>
 </div>
 
-<!-- RIGHT SIDE - INFO -->
 <div class="reveal space-y-10">
 <div class="glass p-8 rounded-2xl shadow-xl">
 <h3 class="text-xl font-semibold mb-6 text-emerald-400">Contact Information</h3>
@@ -670,31 +482,18 @@ Let's <span class="gradient-text">Connect</span>
 <span>Ghaziabad, Uttar Pradesh, India</span>
 </div>
 <div class="flex items-center gap-4">
-<i class="fas fa-code text-emerald-400 text-xl"></i>
-<span>Data Engineer – Python, SQL, Power BI</span>
+<i class="fas fa-chart-line text-emerald-400 text-xl"></i>
+<span>Data Analyst — Python, SQL, Power BI</span>
 </div>
 </div>
 </div>
 
-<!-- SOCIAL LINKS -->
 <div class="glass p-8 rounded-2xl shadow-xl text-center">
 <h3 class="text-lg mb-6 text-gray-300">Connect Online</h3>
 <div class="flex justify-center gap-10 text-3xl">
-<a href="https://github.com/suhailkhhhan/" target="_blank"
-class="hover:text-emerald-400 transition transform hover:scale-110">
-<i class="fab fa-github"></i>
-</a>
-
-<a href="https://www.linkedin.com/in/suhail-khan-053a27372" target="_blank"
-class="hover:text-emerald-400 transition transform hover:scale-110">
-<i class="fab fa-linkedin"></i>
-</a>
-
-<a href="mailto:suhailkhan6669@gmail.com"
-class="hover:text-emerald-400 transition transform hover:scale-110">
-<i class="fas fa-paper-plane"></i>
-</a>
-
+<a href="https://github.com/suhailkhhhan/" target="_blank" class="hover:text-emerald-400 transition transform hover:scale-110"><i class="fab fa-github"></i></a>
+<a href="https://www.linkedin.com/in/suhail-khan-053a27372" target="_blank" class="hover:text-emerald-400 transition transform hover:scale-110"><i class="fab fa-linkedin"></i></a>
+<a href="mailto:suhailkhan6669@gmail.com" class="hover:text-emerald-400 transition transform hover:scale-110"><i class="fas fa-paper-plane"></i></a>
 </div>
 </div>
 </div>
@@ -702,11 +501,8 @@ class="hover:text-emerald-400 transition transform hover:scale-110">
 </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="py-10 text-center border-t border-gray-800 bg-black">
-<p class="text-gray-500 text-sm">
-© 2025 Suhail Khan. Built with focus on Data Engineering.
-</p>
+<p class="text-gray-500 text-sm">© 2025 Suhail Khan. Built with focus on Data Analytics.</p>
 </footer>
 
 <script>
